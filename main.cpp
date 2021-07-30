@@ -86,3 +86,37 @@ void showMenu(struct MenuItem menu[])
     }
   }
 }
+
+void showAll()
+{
+  cout << "List of Items Are Sold" << endl;
+  showSold();
+  cout << endl;
+  cout << "List of Items Are is the Serial" << endl; 
+  showQueue();
+  cout << endl;
+}
+
+//show stack
+void showSold()
+{
+  Order *temp = top;
+  while(temp != NULL)
+  {
+    cout << temp->menuItemSerial << endl;
+    cout << temp->quantity << endl;
+    temp = temp->next;
+  }
+}
+
+//show the queue
+void showQueue()
+{
+  Order *temp = front;
+  while(temp != *rear)
+  {
+    cout << temp->menuItemSerial << endl;
+    cout << temp->quantity << endl;
+    temp = temp->next;
+  }
+}
