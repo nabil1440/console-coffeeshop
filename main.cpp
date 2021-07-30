@@ -17,7 +17,7 @@ struct Order
   int menuItemSerial;
   int quantity;
   struct Order *next;
-} * front, *rear, *top;
+} *front, *rear, *top;
 
 // Helper functions
 void enqueue();
@@ -46,7 +46,7 @@ int main()
 
   menu[0].serial = 01;
   menu[0].price = 100;
-  strcpy(menu[0].name, "Expresso");
+  strcpy(menu[0].name, "Espresso");
 
   menu[1].serial = 02;
   menu[1].price = 150;
@@ -58,7 +58,7 @@ int main()
 
   menu[3].serial = 04;
   menu[3].price = 200;
-  strcpy(menu[3].name, "Cappuchino");
+  strcpy(menu[3].name, "Cappucino");
 
   menu[4].serial = 05;
   menu[4].price = 350;
@@ -119,4 +119,51 @@ void showQueue()
     cout << temp->quantity << endl;
     temp = temp->next;
   }
+}
+
+void placeOrder()
+{
+  int numberOfCoffee, quantityOfEach, serial;
+
+  scanf("%d", &numberOfCoffee);
+
+  while (numberOfCoffee--)
+  {
+    printf("Enter coffee serial: ");
+    scanf("%d", &serial); 
+    printf("Enter quantity: ");
+    scanf("%d", &quantityOfEach);
+
+    enqueue(serial, quantityOfEach); 
+  }  
+}
+
+void enqueue(int serial, int quantity)
+{
+  Order *temp, *newNode; 
+
+  if (front == NULL)
+  {
+
+  }
+}
+
+void push()
+{
+
+}
+
+void dequeue() 
+{
+
+}
+
+void showReceipt()
+{
+
+}
+
+void showUI()
+{
+
 }
