@@ -113,7 +113,7 @@ void showSold()
 void showQueue()
 {
   Order *temp = front;
-  while(temp != *rear)
+  while(temp != rear)
   {
     cout << temp->menuItemSerial << endl;
     cout << temp->quantity << endl;
