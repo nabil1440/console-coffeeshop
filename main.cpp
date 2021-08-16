@@ -41,28 +41,12 @@ void showAll();
 void showSold();
 // Show waiting queue
 void showQueue();
+// Create menu 
+void createMenu(); 
 
 int main()
 {
-  menu[0].serial = 01;
-  menu[0].price = 100;
-  strcpy(menu[0].name, "Espresso");
-
-  menu[1].serial = 02;
-  menu[1].price = 150;
-  strcpy(menu[1].name, "Cold Coffee");
-
-  menu[2].serial = 03;
-  menu[2].price = 250;
-  strcpy(menu[2].name, "Latte");
-
-  menu[3].serial = 04;
-  menu[3].price = 200;
-  strcpy(menu[3].name, "Cappucino");
-
-  menu[4].serial = 05;
-  menu[4].price = 350;
-  strcpy(menu[4].name, "Special Creampied Coffee");
+  createMenu(); 
 
   while (true)
   {
@@ -314,4 +298,27 @@ void serve()
   printf("Press any key to continue...");
   getch();
   system("cls"); 
+}
+
+void createMenu()
+{
+  menu[0].serial = 01;
+  menu[0].price = 100;
+  strcpy(menu[0].name, "Espresso");
+
+  menu[1].serial = 02;
+  menu[1].price = 150;
+  strcpy(menu[1].name, "Cold Coffee");
+
+  menu[2].serial = 03;
+  menu[2].price = 250;
+  strcpy(menu[2].name, "Latte");
+
+  menu[3].serial = 04;
+  menu[3].price = 200;
+  strcpy(menu[3].name, "Cappucino");
+
+  menu[4].serial = 05;
+  menu[4].price = 350;
+  strcpy(menu[4].name, "Special Creampied Coffee");
 }
